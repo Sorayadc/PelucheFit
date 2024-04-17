@@ -1,0 +1,79 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(180.3deg, rgb(210, 218, 244) 37.2%, rgb(220, 171, 171) 137.3%);
+
+    background-size: cover;   /*Ensure the background image covers the entire body */
+    background-repeat: no-repeat;
+
+} 
+.title {
+    color: rgb(68, 15, 117);
+    font-family: 'Times New Roman', Times, serif;
+}
+.description {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 15px;
+ line-height: 1.5;
+}
+
+#welcome {
+    margin-top: 100px;
+}
+
+header {
+    display: flex;           /* Enables flexbox */
+    justify-content: space-between;  /* Positions items on the main-axis (default: horizontal) */
+    align-items: center;     /* Centers items vertically within the container */
+    flex-wrap: nowrap;       /* Prevents wrapping of items onto the next line */
+}
+
+.buttons a {
+    text-decoration: none;        /* Removes underline from links */
+    color: white;                 /* Sets text color */
+    background-color: #cbb2ff;    /* Sets background color */
+    padding: 10px 20px;           /* Adds space around the text */
+    border-radius: 5px;           /* Rounds the corners */
+    border: none;                 /* Removes border */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    font-weight: bold;            /* Makes the font bold */
+    display: inline-block;        /* Aligns with other inline or inline-block elements with spacing */
+    margin: 0 5px;                /* Adds margin to the left and right for spacing between buttons */
+}
+
+.buttons a:hover, .buttons a:focus {
+    background-color: #88c0fc;    /* Darker shade on hover/focus for better interaction feedback */
+    color: #FFF;                  /* Ensures text color remains the same */
+    outline: none;                /* Removes the outline to keep the design clean */
+}
+
+span {
+    font-size: 17px;
+    font-family:fantasy;
+}
+#find {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+p {
+    font-family: fantasy;
+    line-height: 3.5;
+}
+#column2 {
+    margin-top: 5%;
+    margin-right: 10px;
+    text-align: right;
+    line-height: 3.5;
+}
+strong {
+    font-size: 17px;
+}
+#img1 {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+.img {
+    display: fl; /* Ensures the image and text are displayed inline */
+    vertical-align: middle; /* Aligns the image vertically with the text */
+}
