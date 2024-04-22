@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PelucheFit</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
         <header>
             <h1 class="title">Welcome to Peluche fit</h1>
             <div class="buttons">
                 <a  id="about" href="./about.html">About us</a>
-                <a  id="log" href="login.html">Log in</a>
+                <a id="log" onclick="openModal()">Login</a>
                 <a id="signup" href="/signup.html">Sign up</a>
             </div>        
         </header>
+        
     <h2 id="description1" class="description"> Welcome to our vibrant fitness community dedicated to helping you achieve your health and wellness goals. <br>
              Are you ready to embark on a journey to a stronger, healthier version of yourself?<br>
             At PelucheFit, we believe in the power of fitness to transform lives.<br>
@@ -28,6 +30,22 @@
         <strong>Progress Tracking:</strong>  You'll find weight charts, body measurements, workout logs, and achievements reached in your profile over time.<br>
         </p>
         </p>   
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <h2 id="loginh2">Please Log In</h2>
+              <!-- login form -->
+              <form class="form">
+                <!--login form fields -->
+                <p class="logintext">Enter your username</p>
+                <input class="loginp" id="usernameInput" type="text" placeholder="Username" name="username" required>
+                <p class="logintext">Enter your password</p>
+                <input class="loginp" type="password" placeholder="Password" name="password" required>
+                <button class="loginbut" type="submit">Log In</button>
+              </form>
+            </div>
+          </div>
         
 </body>
+<script src="script.js"></script>
 </html>

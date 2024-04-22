@@ -17,4 +17,36 @@ function openModal() {
       modal.style.display = "none";
     }
   }
-  
+
+  function getUserData() {
+    validateForm();
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    
+    // Storing data in LocalStorage
+    const retrievedUsername = localStorage.getItem('username', username);
+    const retrieveEmail = localStorage.getItem('email', email);
+    
+    console.log("username: ", retrievedUsername )
+    console.log("email: ", retrieveEmail )
+
+  }
+
+
+  function saveFormData() {
+    validateForm();
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    
+    // Storing data in LocalStorage
+    localStorage.setItem('username', username);
+    localStorage.setItem('email', email);
+    
+    alert('Data saved in Local Storage');
+  }
+
+  function validateForm() {
+    if(document.getElementById("usernameInput").value.length <= 0) {
+      alert("please fill username")
+    }
+  }
