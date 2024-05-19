@@ -1,0 +1,6 @@
+
+.column {
+    width: fit-content;
+    display: grid;
+    font-family: fantasy;
+} 

@@ -6,14 +6,16 @@
     <title>PelucheFit</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="signin.css">
+    <link rel="stylesheet" href="aboutUs.css">s
 </head>
 <body>
         <header>
             <h1 class="title">Welcome to Peluche fit</h1>
             <div class="buttons">
-                <a  id="about" href="./about.html">About us</a>
-                <a id="log" onclick="openModal()">Login</a>
-                <a id="signup" href="/signup.html">Sign up</a>
+                <a id="about" href="#">About us</a>
+                <a id="log" onclick="openModal('loginModal')">Login</a>
+                <a id="signin" href="#" onclick="openModal('signinModal')">Sign in</a>
             </div>        
         </header>
         
@@ -29,10 +31,10 @@
         <p id="column2"><strong>Training Calendar:</strong>  Allows you to schedule and organize your workouts to stay more organized and committed to your routine.<br>
         <strong>Progress Tracking:</strong>  You'll find weight charts, body measurements, workout logs, and achievements reached in your profile over time.<br>
         </p>
-        </p>   
+        </p>
         <div id="loginModal" class="modal">
             <div class="modal-content">
-              <span class="close" onclick="closeModal()">&times;</span>
+              <span class="close" onclick="closeModal('loginModal')">×</span>
               <h2 id="loginh2">Please Log In</h2>
               <!-- login form -->
               <form class="form">
@@ -40,12 +42,57 @@
                 <p class="logintext">Enter your username</p>
                 <input class="loginp" id="usernameInput" type="text" placeholder="Username" name="username" required>
                 <p class="logintext">Enter your password</p>
-                <input class="loginp" type="password" placeholder="Password" name="password" required>
-                <button class="loginbut" type="submit">Log In</button>
+                <input id="passwordInput" class="loginp" type="password" placeholder="Password" name="password" required>
+                <button class="loginbut" onclick="getUserData()" > Log in</button>
+                <!-- <button class="savedata" type="button" onclick="getUserData()">Save Data</button> -->
               </form>
             </div>
           </div>
-        
-</body>
-<script src="script.js"></script>
-</html>
+        <div id="signinModal" class="modal">
+          <div class="modal-content">
+              <span class="close" onclick="closeModal('signinModal')">&times;</span>
+              <h2 id="signinh2">Create an Account</h2>
+              <!-- Sign in form -->
+              <form id="signinForm">
+                <div class="column">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="confirmEmail">Confirm your email:</label>
+                    <input type="email" id="confirmEmail" name="email" placeholder="Enter again your email" required><br>
+                    <label for="password">Password:</label>
+                    <input id="signupPasswordInput" type="password" placeholder="Password" name="password" required>
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" required><br>
+                    <label for="gender" required >Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select><br>
+                    <!-- Otros campos adicionales según sea necesario -->
+                </div>
+                <div class="column2">
+                </div>
+              </form>
+          </div>
+      </div>
+       <!-- El Modal -->
+    <div id="aboutUsModal" class="modal">
+      <!-- Contenido del Modal -->
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('aboutUsModal')">&times;</span>
+        <h2>About Us</h2>
+          <p>Nuestra página web está diseñada para [descripción breve de la página].</p>
+          <h3>Contacta con Nosotros</h3>
+          <ul>
+              <li>Email: contacto@ejemplo.com</li>
+              <li>Teléfono: +34 123 456 789</li>
+              <li>Dirección: Calle Ejemplo, 123, Ciudad, País</li>
+          </ul>
+      </div>
+  </div>
+      <script src="script.js"></script>
+
+        </body>
+        </html>
